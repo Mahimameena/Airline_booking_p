@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airline</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="AirLine1.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <label for="exampleColorInput" class="form-label">Color picker</label>
+        <input type="color" class="form-control form-control-color" id="color" value="#563d7c"
+          title="Choose your color">
+        <label for="ColorInput" class="form-label">Color picker</label>
+        <input type="color" class="form-control form-control-color" id="text" onchange="cc()" value="#563d7c"
+          title="Choose your color">
+      </div>
+      <div class="col-md-6">
+        <h1 id="topheading" class="mt-5 text-center tracking-in-expand-fwd"><strong
+            style="text-shadow: 3px 3px 4px black;">KingFisher International</strong></h1>
+        <p class="mt-2 text-center tracking-in-expand-fwd"><strong>Best Policy Across The Glob</strong></p>
+        <div class="container-fluid my-5 pb-3" id="maindiv">
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label" name="check1" onchange="view1()">First name</label>
+              <input type="text" class="form-control" onkeypress="return alphaOnly(event);" id="validationCustom01"
+                value="" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label" name="check2" onchange="view1()">Last name</label>
+              <input type="text" class="form-control" onkeypress="return alphaOnly(event);" id="validationCustom02"
+                value="" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label" name="check3" onchange="view1()">Father
+                Name</label>
+              <input type="text" class="form-control" onkeypress="return alphaOnly(event);"
+                id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label" name="check4" onchange="view1()">Mother name</label>
+              <input type="text" class="form-control" onkeypress="return alphaOnly(event);" id="validationCustom02"
+                value="" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom04" class="form-label">Gender</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select any one.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Category</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>OBC</option>
+                <option>GENERAL</option>
+                <option>SC</option>
+                <option>ST</option>
+              </select>
+              <div class="invalid-feedback">
+                Please Select a valid catagory
+              </div>
+            </div>
+            <div class="col-md-4">
+
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" name="dob" onchange="view1()"
+                placeholder="Enter your date of birth" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Mobile Number</label>
+              <input type="number" class="form-control" numberOnly(event) name="check9" onchange="checkn(),view1()" maxlength="10"
+                id="mobilenumber" value="" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label" name="check10" onchange="view1()">Email ID</label>
+              <input type="email" class="form-control" id="validationCustom02" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label" name="check11" onchange="view1()">Address</label>
+              <input type="text" class="form-control" id="validationCustom02" required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom03" class="form-label" name="check12" onchange="view1()">City</label>
+              <input type="text" class="form-control" onkeypress="return alphaOnly(event);" id="validationCustom03"
+                required>
+              <div class="invalid-feedback">
+                Field is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom04" class="form-label">State</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Orisha</option>
+                <option>Uttar Predesh</option>
+                <option>Karnataka</option>
+                <option>Chhattisgarh</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom05" class="form-label" name="check13" onchange="view1()">Zip</label>
+              <input type="number" class="form-control" numberOnly(event) id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions(optional)
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" id="mainbtn" type="submit">Check Valid</button>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" id="newbtn" style="display: none;" onclick="location.href='AirLine2.html'">Submit form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+  <script>
+     (() => {
+          'use strict'
+
+
+          const forms = document.querySelectorAll('.needs-validation')
+
+
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+
+            }, false)
+          })
+        })()
+
+    view1 = () => {
+      let check1 = document.getElementsByName("check1")[0].value;
+      let check2 = document.getElementsByName("check2")[0].value;
+      let check3 = document.getElementsByName("check3")[0].value;
+      let check4 = document.getElementsByName("check4")[0].value;
+       let check7 = document.getElementsByName("check13")[0].value;
+      let check8 = document.getElementsByName("dob")[0].value;
+      let check9 = document.getElementsByName("check9")[0].value;
+      let check10 = document.getElementsByName("check10")[0].value;
+       let check11 = document.getElementsByName("check11")[0].value;
+      let check12 = document.getElementsByName("check12")[0].value;
+      let ans = document.getElementById("newbtn");
+      console.log("1st");
+      if (check1 == "" || check2 == "" || check3 == "" || check4 == ""|| check8 == "" || check9 == "" || check10 == "" || check11 == "" || check12 == "") {
+        ans.disabled = true;
+        console.log("dis");
+      }
+      else {
+        ans.disabled = false;
+        document.getElementById("mainbtn").style.display = "none";
+              document.getElementById("newbtn").style.display = "block";
+        console.log("en");
+      }
+
+    }
+
+    checkn = () => {
+      let n = document.getElementById("mobilenumber").value;
+      let c = n.toString().length;
+      if (c > 10 || c < 10) {
+        alert("Enter Correct Number");
+        document.getElementById("mainbtn").disabled = true;
+      }
+      else {
+        // alert("correct Pattern");
+        document.getElementById("mainbtn").disabled = false;
+
+      }
+    }
+    cc = () => {
+      let bg = document.getElementById("color").value;
+      let bgt = document.getElementById("text").value;
+      document.body.style.background = bg;
+      document.body.style.color = bgt;
+    }
+  </script>
+  <script>
+    function alphaOnly(event) {
+      var key = event.keyCode;
+      return ((key >= 65 && key <= 90) || (key >= 97 && key <= 122));
+    }
+    function numberOnly(event) {
+      var key = event.keyCode;
+      return ((key >= 48 && key <= 57));
+    }
+  </script>
+</body>
+
+</html>

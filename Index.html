@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="AirLine.css">
+    <title>Airline</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img id="logo" src="company logo.jpg" alt="logo">
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     Book Now
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login page</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="container">
+        
+            <div class="row ">
+                <form action="AirLine1.html" name="myform">
+                <div class="offset-3 col col-md-12">
+                   
+                    <label for="user" class="d-block">Username</label>
+                    <input type="text" name="u_name" id="user" required>
+                    <span id="us" class="text-danger"></span>
+                    
+
+              
+                </div>
+                <div class="offset-3 col col-md-12">
+                   
+                   
+                    <label for="pass" class="d-block">Password</label>
+                   <input type="Password" name="p_name" id="pass" required>
+                   <span id="us" class="text-danger"></span>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="return first()">OK</button>
+                  </div>
+            </form>
+            </div>
+        </div>
+        </div>
+       
+    </div>
+      </div>
+    </div>
+</div>
+  </div>
+
+    <script>
+        var user=document.forms["myform"]["u_name"];
+        var pass=document.forms["myform"]["p_name"];
+
+        function first(){
+            if(user==""){
+                document.getElementById("us").innerHTML="this field is required";
+
+            }
+            else{
+                document.getElementById("us").innerHTML="";
+            }
+        }
+
+
+ 
+</script>
+</body>
+</html>

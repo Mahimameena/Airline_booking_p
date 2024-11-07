@@ -1,0 +1,21 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+body{
+    background: url(flight2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#maindiv{
+   
+    background: rgba(11, 10, 10, 0.8);
+    
+}
+#topheading{
+    color: rgb(155, 237, 145) !important;
+    /* margin-top: 14rem; */
+}
+label{
+    color: white;
+}
